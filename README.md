@@ -86,6 +86,9 @@ Parameters:
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 connectport=8080 connectaddress=192.168.171.139
 ```
 
+## On Startup or Restart
+Out of the box, windows does not start a wsl cron and the docker service. As IP address in docker may change, we need to activate two things:1) WSL cron; 2) Windows on Startup script
+
 
 
 
