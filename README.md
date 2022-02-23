@@ -63,6 +63,16 @@ docker rmi nginx
 
 ```
 
+Windows Firewall Defender - Advanced Security
+```
+Open ports that need to be open
+```
+
+```
+#find the wsl IP address
+wsl hostname -I
+```
+
 
 
 
