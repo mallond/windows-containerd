@@ -101,7 +101,7 @@ Wsl Script (startmeup.sh)
 ```
 #!/bin/sh
 sudo service docker start
-echo "Sleeping for 10 seconds…[hack need to add wait state]"
+echo "Sleeping for 10 seconds…hack need to add wait state"
 sleep 10
 docker start nginx0
 docker start nginx1
