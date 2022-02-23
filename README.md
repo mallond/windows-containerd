@@ -98,6 +98,7 @@ sudo visudo
 
 Wsl Script (startmeup.sh)
 ```
+```
 #!/bin/sh
 sudo service docker start
 docker start nginx0
