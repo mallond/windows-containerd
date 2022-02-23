@@ -113,7 +113,6 @@ sudo visudo
   %sudo ALL=NOPASSWD: /mnt/c/Windows/system32/./startmeup.sh
 ```
 
-```
 Powershell script
 ```
 #Note private IP address will remain constant; however, the wsl and public ip address could change
