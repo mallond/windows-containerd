@@ -68,9 +68,22 @@ Windows Firewall Defender - Advanced Security
 Open ports that need to be open
 ```
 
+Azure Specific Example of Netsh
 ```
 #find the wsl IP address
-wsl hostname -I
+wsl hostname -I example 192.168.171.139
+windows: ipconfig - get the IPv4 Address example:10.6.0.4
+
+Parameters:
+       Tag              Value
+       listenport     - IPv4 port on which to listen.
+       connectaddress - IPv4 address to which to connect.
+       connectport    - IPv4 port to which to connect.
+       listenaddress  - IPv4 address on which to listen.
+       protocol       - Protocol to use.  Currently only TCP is supported.
+
+# This will map the Windows 10.6.0.4 address to the WSL address of 192.168.171.139. Azure will take care of the Public mapping to the 10.6.0.4 private address. 
+netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 connectport=8080 connectaddress=192.168.171.139
 ```
 
 
