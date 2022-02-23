@@ -89,10 +89,19 @@ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 conn
 ## On Startup or Restart
 Out of the box, windows does not start a wsl cron and the docker service. As IP address in docker may change, we need to activate two things:1) WSL cron; 2) Windows on Startup script
 
+Prepare Sudoers file for wsl permision to start the linux cron scheduler
+```
+# Edit the sudoers file
+sudo visudo
+  # Add the following at the end of the file  
+  %sudo ALL=NOPASSWD: /usr/sbin/service cron start  
+
+
+```
 Powershell script
 ```
 #Note private IP address will remain constant; however, the wsl and public ip address could change
-wsl.exe sudo /etc/init.d/ssh start
+wsl.exe sudo /usr/sbin/service cron start
 $wsl_ip = (wsl hostname -I).trim()
 Write-Host "WSL Machine IP: ""$wsl_ip"""
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 connectport=8080 connectaddress=$wsl_ip
