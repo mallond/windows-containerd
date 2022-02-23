@@ -101,6 +101,8 @@ Wsl Script (startmeup.sh)
 ```
 #!/bin/sh
 sudo service docker start
+echo "Sleeping for 10 seconds…"
+sleep 10
 docker start nginx0
 docker start nginx1
 ```
