@@ -102,7 +102,7 @@ Powershell script
 ```
 #Note private IP address will remain constant; however, the wsl and public ip address could change
 wsl.exe sudo /usr/sbin/service cron start
-$wsl_ip = (wsl hostname -I).trim()
+$wsl_ip = (wsl hostname -I).trim().split(" ")[0]
 Write-Host "WSL Machine IP: ""$wsl_ip"""
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 connectport=8080 connectaddress=$wsl_ip
 netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 connectport=8081 connectaddress=$wsl_ip
