@@ -62,7 +62,7 @@ docker container rm nginx1 nginx0 --force
 docker rmi nginx
 
 ```
-
+## Networking
 Windows Firewall Defender - Advanced Security
 ```
 Open ports that need to be open
