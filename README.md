@@ -91,6 +91,7 @@ Out of the box, windows does not start a wsl cron and the docker service. As IP 
 
 Powershell script
 ```
+#Note private IP address will remain constant; however, the wsl and public ip address could change
 wsl.exe sudo /etc/init.d/ssh start
 $wsl_ip = (wsl hostname -I).trim()
 Write-Host "WSL Machine IP: ""$wsl_ip"""
@@ -99,7 +100,7 @@ netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 conn
 ```
 Wsl Script
 ```
-sudo service docker startcurl 
+sudo service docker start
 docker start nginx0
 docker start nginx1
 ```
