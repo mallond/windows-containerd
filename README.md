@@ -91,7 +91,7 @@ Out of the box, windows does not start a wsl cron and the docker service. As IP 
 
 Prepare Sudoers file for wsl permision to start the linux cron scheduler
 ```
-# Edit the sudoers file
+# Edit the sudoers file 
 sudo visudo
   # Add the following at the end of the file  
   %sudo ALL=NOPASSWD: /usr/sbin/service cron start  
@@ -102,16 +102,26 @@ Powershell script
 ```
 #Note private IP address will remain constant; however, the wsl and public ip address could change
 wsl.exe sudo /usr/sbin/service cron start
+wsl sudo /mnt/c/Windows/system32/./startmeup.sh
+
 $wsl_ip = (wsl hostname -I).trim().split(" ")[0]
 Write-Host "WSL Machine IP: ""$wsl_ip"""
 netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 connectport=8080 connectaddress=$wsl_ip
 netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 connectport=8081 connectaddress=$wsl_ip
 ```
-Wsl Script
+Wsl Script (startmeup.sh)
 ```
+#!/bin/sh
 sudo service docker start
 docker start nginx0
 docker start nginx1
+```
+
+```
+chmod +x startmeup.sh
+sudo visudo
+  # Add the following at the end of the file  
+  %sudo ALL=NOPASSWD: /mnt/c/Windows/system32/./startmeup.sh
 ```
 
 
