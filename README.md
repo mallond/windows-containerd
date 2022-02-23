@@ -89,6 +89,20 @@ netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 conn
 ## On Startup or Restart
 Out of the box, windows does not start a wsl cron and the docker service. As IP address in docker may change, we need to activate two things:1) WSL cron; 2) Windows on Startup script
 
+Powershell script
+```
+wsl.exe sudo /etc/init.d/ssh start
+$wsl_ip = (wsl hostname -I).trim()
+Write-Host "WSL Machine IP: ""$wsl_ip"""
+netsh interface portproxy add v4tov4 listenport=8080 listenaddress=10.6.0.4 connectport=8080 connectaddress=$wsl_ip
+netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 connectport=8081 connectaddress=$wsl_ip
+```
+Wsl Script
+```
+docker start nginx0
+docker start nginx1
+```
+
 
 
 
