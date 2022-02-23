@@ -99,6 +99,7 @@ netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 conn
 ```
 Wsl Script
 ```
+sudo service docker startcurl 
 docker start nginx0
 docker start nginx1
 ```
