@@ -138,6 +138,8 @@ Key to execting a powershell script
 -file "C:\Windows\System32\startmeup.ps1"
 
 Note: Restarting vi RDP does not work, you have to restart from Azure to test this thourghly. 
+>> Verified. When you are in an Azure RDP and you do a restart from the task bar, this will break the netsh 
+networking and docker process. Reminder, use the Azure portal for stop, start and restart. 
 
 
 
