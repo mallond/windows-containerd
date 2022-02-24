@@ -128,8 +128,15 @@ netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 conn
 
 Windows Task Schedular
 
-Key to execting a powershell script
-![image](https://user-images.githubusercontent.com/993459/155615907-d8dab031-5718-41e1-b0db-e3a53643baff.png)
+Key to execting a powershell script  
+![image](https://user-images.githubusercontent.com/993459/155615907-d8dab031-5718-41e1-b0db-e3a53643baff.png)  
+
+![image](https://user-images.githubusercontent.com/993459/155616015-18b2b71e-6ccd-4676-9952-8151ae6e15ce.png)  
+
+-file "C:\Windows\System32\startmeup.ps1"
+
+Note: Restarting vi RDP does not work, you have to restart from Azure to test this thourghly. 
+
 
 
 
