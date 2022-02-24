@@ -126,7 +126,10 @@ netsh interface portproxy add v4tov4 listenport=8081 listenaddress=10.6.0.4 conn
 ```
 
 
+Windows Task Schedular
 
+Key to execting a powershell script
+![image](https://user-images.githubusercontent.com/993459/155615907-d8dab031-5718-41e1-b0db-e3a53643baff.png)
 
 
 
