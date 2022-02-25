@@ -8,6 +8,7 @@ docker run -d --name jenkins9080 --restart unless-stopped -p 9080:8080 -p 50000:
 # cat /var/jenkins_home/secrets/initialAdminPassword
 
 > Important note to mapping data. For windows the /User/devops/jenkins9082 needs to be created in powershell. Keep the other jenkin instance directories at this user level.  
+
 Example of five independent containers running: 
 ```
 /User/devops/jenkins9081
