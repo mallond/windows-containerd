@@ -93,7 +93,7 @@ Out of the box, windows does not start a wsl cron and the docker service. As IP 
 
 Prepare Sudoers file for wsl permision to start the linux cron scheduler
 ```
-# Edit the sudoers file 
+# (1)  Edit the sudoers file 
 sudo visudo
   # Add the following at the end of the file  
   %sudo ALL=NOPASSWD: /usr/sbin/service cron start  
@@ -109,6 +109,7 @@ docker start nginx0
 docker start nginx1
 ```
 ```
+# (2)  Edit the sudoers file 
 chmod +x startmeup.sh
 sudo visudo
   # Add the following at the end of the file  
