@@ -1,6 +1,14 @@
 ## Jenkins
+
 ```
-docker run -d --name jenkins9080 --restart unless-stopped -p 9080:8080 -p 50000:50000 -v /mnt/c/Users/devops/jenkins9080:/var/jenkins_home jenkins/jenkins:2.336-jdk11
+# from powershell
+mkdir data/jenkins9081
+mkdir data/jenkins9082
+mkdir data/jenkins9083
+mkdir data/jenkins9084
+```
+```
+docker run -d --name jenkins9080 --restart unless-stopped -p 9080:8080 -p 50000:50000 -v /mnt/c/Users/devops/data/jenkins9080:/var/jenkins_home jenkins/jenkins:2.336-jdk11
   
 # This takes some time to become accessible due to all the loding plugins
 # docker container ls
@@ -12,9 +20,9 @@ docker run -d --name jenkins9080 --restart unless-stopped -p 9080:8080 -p 50000:
 
 Example of five independent containers running: 
 ```
-/User/devops/jenkins9081
-/User/devops/jenkins9082
-/User/devops/jenkins9083
-/User/devops/jenkins9084
+/User/devops/data/jenkins9081
+/User/devops/data/jenkins9082
+/User/devops/data/jenkins9083
+/User/devops/data/jenkins9084
 etc
 ```
