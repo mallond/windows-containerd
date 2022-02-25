@@ -1,6 +1,6 @@
 ## Jenkins
 ```
-docker run -d --name jenkins9080 --restart unless-stopped -p 9080:8080 -p 50000:50000 -v /mnt/c/Users/devops/jenkins9080:/var/jenkins_home jenkins/jenkins:lts-jdk11 
+docker run -d --name jenkins9080 --restart unless-stopped -p 9080:8080 -p 50000:50000 -v /mnt/c/Users/devops/jenkins9080:/var/jenkins_home jenkins/jenkins:2.336-jdk11
   
 # This takes some time to become accessible due to all the loding plugins
 # docker container ls
