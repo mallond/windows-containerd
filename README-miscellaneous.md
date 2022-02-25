@@ -11,9 +11,9 @@ docker container stats
 
 [influxDb Docker Monitoring](https://www.influxdata.com/influxdb-templates/docker/)
 
-Number of Docker containers 
-Network TX traffic per container/sec 
-CPU usage per container 
-Memory usage % per container 
-Memory usage per container 
-Network RX traffic per container/sec 
+Number of Docker containers  
+Network TX traffic per container/sec  
+CPU usage per container  
+Memory usage % per container  
+Memory usage per container  
+Network RX traffic per container/sec  
