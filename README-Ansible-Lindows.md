@@ -1,13 +1,15 @@
+# Lindows Ansible Monster
 
+## Install Ansible in Ubuntu
 ```
 sudo apt update
 sudo apt install ansible
 ```
-
+## Modify Hosts file
 ```
 sudo vi /etc/ansible/hosts
 
-# Example hosts file
+## Example hosts file
 [servers]
 server1 ansible_host=203.0.113.111
 server2 ansible_host=203.0.113.112
@@ -18,6 +20,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 ```
 
+## Show all Servers
 ```
 # Show all servers
 ansible-inventory --list -y
@@ -26,6 +29,7 @@ ansible-inventory --list -y
 ansible localhost -m ping
 ```
 
+## Test a few commands
 ```
 ansible localhost -a "ls -al"
 ```
