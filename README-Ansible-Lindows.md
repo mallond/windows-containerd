@@ -25,3 +25,7 @@ ansible-inventory --list -y
 #Or for localhost this is implied 
 ansible localhost -m ping
 ```
+
+```
+ansible localhost -a "ls -al"
+```
