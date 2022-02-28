@@ -33,3 +33,14 @@ ansible localhost -m ping
 ```
 ansible localhost -a "ls -al"
 ```
+
+## Seting up the Windows Remote Management
+
+### Enable PSRemoting 
+
+```
+Enable-PSRemoting -SkipNetworkProfileCheck
+```
+![image](https://user-images.githubusercontent.com/993459/156064080-e3e3a3b2-2eac-408a-bd9e-1947b0966d64.png)
+
+
