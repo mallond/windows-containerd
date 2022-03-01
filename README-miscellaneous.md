@@ -17,3 +17,10 @@ CPU usage per container
 Memory usage % per container  
 Memory usage per container  
 Network RX traffic per container/sec  
+
+## Get Docker Container IP-Address
+```
+docker ps
+# inspect container id
+docker inspect  6d7930b794f6 | grep "IPAddress"
+```
