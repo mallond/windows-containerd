@@ -1,4 +1,4 @@
-# Lindows Ansible Monster
+# Lindows Ansible Monster - Windows II
 
 ## Install Ansible in Ubuntu
 ```
@@ -8,14 +8,14 @@ sudo apt install ansible
 
 ### Enable Windows Remote Management 
 ```
+# Setup WinRM
 winrm quickconfig -Force
 Enable-PSRemoting
-or
-Enable-PSRemoting -SkipNetworkProfileCheck
 
-# Open port 5985 both in Windows Firewall and Azure Firewall
-
-Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+# > Open Windows firewall port 5985
+# > Open Azure firewall port 5985 if public IP is used
+# > Create Ansible BOT user
+# > Open port 5985 both in Windows Firewall and Azure Firewall
 
 ```
 
