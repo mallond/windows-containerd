@@ -49,7 +49,7 @@ ansible localhost -m ping
 ansible localhost -a "ls -al"
 ```
 
-## Seting up the Windows Remote Management
+
 
 
 
