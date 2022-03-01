@@ -14,14 +14,19 @@ sudo apt install ansible
 sudo vi /etc/ansible/hosts
 
 ## Example hosts file
-[servers]
-server1 ansible_host=203.0.113.111
-server2 ansible_host=203.0.113.112
-server3 ansible_host=203.0.113.113
+```
+[win]
+server1 ansible_host=10.7.0.4
+server2 ansible_host=13.64.226.128
 
-[all:vars]
-ansible_python_interpreter=/usr/bin/python3
+[win:vars]
+ansible_user=robo
+ansible_password=robo
+ansible_connection=winrm
+ansible_port=5985
+ansible_winrm_transport=ntlm
 
+#Note: ntlm is the easiest for windows
 ```
 
 ## Show all Servers
@@ -40,11 +45,11 @@ ansible localhost -a "ls -al"
 
 ## Seting up the Windows Remote Management
 
-### Enable PSRemoting 
+### Enable PSRemoting Basic
+```
+Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+```
 
-```
-Enable-PSRemoting -SkipNetworkProfileCheck
-```
-![image](https://user-images.githubusercontent.com/993459/156064080-e3e3a3b2-2eac-408a-bd9e-1947b0966d64.png)
+
 
 
