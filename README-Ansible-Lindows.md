@@ -12,6 +12,8 @@ sudo apt install ansible
 ### Enable PSRemoting Basic
 ```
 Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+#Note: Windows Allow App Through Firewall
+#      Windows Remote Managment, select checkbox and save
 ```
 
 ## Modify Hosts file
