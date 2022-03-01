@@ -6,9 +6,6 @@ sudo apt update
 sudo apt install ansible
 ```
 
-## Install Windows Remote Management 
-[winrm](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup)
-
 ### Enable Windows Remote Management 
 ```
 winrm quickconfig -Force
