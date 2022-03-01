@@ -1,6 +1,6 @@
 # Lindows Ansible Monster - Windows II
 
-## Install Ansible in Ubuntu
+## Install Ansible in WSL/Ubuntu
 ```
 sudo apt update
 sudo apt install ansible
