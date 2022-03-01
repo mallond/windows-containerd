@@ -10,12 +10,13 @@ sudo apt install ansible
 ```
 winrm quickconfig -Force
 Enable-PSRemoting
+or
+Enable-PSRemoting -SkipNetworkProfileCheck
 
 # Open port 5985 both in Windows Firewall and Azure Firewall
 
 Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
-#Note: Windows Allow App Through Firewall
-#      Windows Remote Managment, select checkbox and save
+
 ```
 
 ## Modify Hosts file
