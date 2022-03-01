@@ -9,8 +9,13 @@ sudo apt install ansible
 ## Install Windows Remote Management 
 [winrm](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup)
 
-### Enable PSRemoting Basic
+### Enable Windows Remote Management 
 ```
+winrm quickconfig -Force
+Enable-PSRemoting
+
+# Open port 5985 both in Windows Firewall and Azure Firewall
+
 Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
 #Note: Windows Allow App Through Firewall
 #      Windows Remote Managment, select checkbox and save
