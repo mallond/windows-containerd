@@ -1,4 +1,10 @@
-# Build a Windows box from WSL - Build Within
+#Build Jenkins, Prometheus, Grafana Within Windows
 
 > Prerequsites - WSL installed
+
+## Manual: 
+
+## Script:
+
+
 
