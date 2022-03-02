@@ -1,4 +1,4 @@
-# Provision a Windows box from WSL - Build Within
+# Build a Windows box from WSL - Build Within
 
 > Prerequsites - WSL installed
 
